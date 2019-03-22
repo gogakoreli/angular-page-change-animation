@@ -1,7 +1,10 @@
 <div class="navbar">
   <a [routerLink]="['science']">Science</a>
   <a [routerLink]="['technology']">Technology</a>
+  <a [routerLink]="['business']">Business</a>
+  <a [routerLink]="['sports']">Sports</a>
 </div>
+
 <div class="content" [@routerAnimation]="getRouteAnimation(router)">
   <router-outlet #router="outlet"></router-outlet>
 </div>

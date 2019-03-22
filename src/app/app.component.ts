@@ -1,27 +1,22 @@
-import { routerTransition } from './common/animations';
-import { NavigationService } from './common/navigation.service';
+import { routerAnimation } from './common/animations';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [
-    routerTransition(),
-  ]
+  animations: [routerAnimation()],
 })
 export class AppComponent {
-  title = 'app';
+  constructor() {}
 
-  constructor(
-    private navigationService: NavigationService
-  ) {
-  }
+  public getRouteAnimation(outlet: RouterOutlet) {
+    const res =
+      outlet.activatedRouteData.num === undefined
+        ? -1
+        : outlet.activatedRouteData.num;
 
-  getRouteAnimation(outlet) {
-    console.log('lastValue', this.navigationService.lastValue);
-    console.log('newValue', this.navigationService.newValue);
-    console.log('result', this.navigationService.animationValue);
-    return this.navigationService.animationValue;
+    return res;
   }
 }

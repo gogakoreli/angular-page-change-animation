@@ -7,11 +7,21 @@ const routes: Routes = [
   { path: 'science', component: ScienceComponent, data: { num: 1 } },
   { path: 'technology', component: TechnologyComponent, data: { num: 5 } },
 
+  {
+    path: 'business',
+    loadChildren: './modules/business/business.module#BusinessModule',
+  },
+
+  {
+    path: 'sports',
+    loadChildren: './modules/sports/sports.module#SportsModule',
+  },
+
   { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
