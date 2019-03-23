@@ -1,7 +1,8 @@
-Angular — Route transition Animation, change page back and forth (v5)
+# Router Transition Animation - change page back and forth Angular 7
 
-How to animate your page change using the Angular Animation
+How to create fluid page change animation using the Angular Animation
 
-https://t.co/mIRtv7GBXy Medium post about this topic
+📝 See Medium article about this topic [Angular 7 - Improved Router Transition Animation](https://medium.com/@gogakoreli/angular-7-improved-router-transition-animation-5bc4578a2f3a)
 
-Live example demo hosted on StackBlitz https://stackblitz.com/edit/angular-page-change-animation
+# Demonstration
+- Live StackBlitz Editor & Preview imported from GitHub: [StackBlitz Link](https://stackblitz.com/github/gogakoreli/angular-page-change-animation)
