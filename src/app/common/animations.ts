@@ -11,18 +11,20 @@ export function routerAnimation() {
   return trigger('routerAnimation', [
     // One time initial load. Move page from left -100% to 0%
     transition('-1 => *', [
-      style({
-        position: 'fixed',
-        width: '100%',
-        transform: 'translateX(-100%)',
-      }),
-      animate(
-        '500ms ease',
+      query(':enter', [
         style({
-          opacity: 1,
-          transform: 'translateX(0%)',
+          position: 'fixed',
+          width: '100%',
+          transform: 'translateX(-100%)',
         }),
-      ),
+        animate(
+          '500ms ease',
+          style({
+            opacity: 1,
+            transform: 'translateX(0%)',
+          }),
+        ),
+      ]),
     ]),
 
     // Previous, slide left to right to show left page
